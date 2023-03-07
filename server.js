@@ -80,7 +80,7 @@ const server = app.listen(4444, err => {
 const io = new Server(server, {
     cors: {
         // origin: "http://localhost:3000",
-        origin: "https://chat-0y1j.onrender.com",
+        origin: "https://live-chat-theta.vercel.app/",
     },
 });
 
