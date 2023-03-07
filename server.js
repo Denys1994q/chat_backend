@@ -69,24 +69,25 @@ app.post("/upload", upload.single("image"), async (req, res) => {
     }
 });
 
-// const server = app.listen(4444, err => {
-//     if (err) {
-//         return console.log(err);
-//     }
-//     console.log("Server OK");
-// });
-const server = app.listen("https://chat-0y1j.onrender.com/", err => {
+const server = app.listen(4444, err => {
     if (err) {
         return console.log(err);
     }
     console.log("Server OK");
 });
+// const server = app.listen("https://chat-0y1j.onrender.com/", err => {
+//     if (err) {
+//         return console.log(err);
+//     }
+//     console.log("Server OK");
+// });
 
 // sockets
 const io = new Server(server, {
     cors: {
         // origin: "http://localhost:3000",
         origin: "https://live-chat-theta.vercel.app/",
+        credentials: true,
     },
 });
 
