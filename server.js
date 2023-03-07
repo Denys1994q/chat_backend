@@ -83,7 +83,7 @@ const server = app.listen(4444, err => {
 // });
 
 // sockets
-const io = new Server("https://chat-0y1j.onrender.com/", {
+const io = new Server(server, {
     cors: {
         // origin: "http://localhost:3000",
         // origin: "https://live-chat-theta.vercel.app/",
