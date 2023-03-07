@@ -69,7 +69,13 @@ app.post("/upload", upload.single("image"), async (req, res) => {
     }
 });
 
-const server = app.listen(4444, err => {
+// const server = app.listen(4444, err => {
+//     if (err) {
+//         return console.log(err);
+//     }
+//     console.log("Server OK");
+// });
+const server = app.listen("https://chat-0y1j.onrender.com/", err => {
     if (err) {
         return console.log(err);
     }
