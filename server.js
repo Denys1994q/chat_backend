@@ -86,7 +86,8 @@ const server = app.listen(4444, err => {
 const io = new Server(server, {
     cors: {
         // origin: "http://localhost:3000",
-        origin: "https://live-chat-theta.vercel.app/",
+        // origin: "https://live-chat-theta.vercel.app/",
+        origin: "*",
         credentials: true,
     },
 });
