@@ -69,14 +69,6 @@ app.post("/upload", upload.single("image"), async (req, res) => {
     }
 });
 
-// const server1 = createServer(app);
-// const io = new Server(server1, {
-//     serveClient: false,
-// });
-// io.on("connection", socket => {
-//     onConnection(io, socket);
-// });
-
 const server = app.listen(4444, err => {
     if (err) {
         return console.log(err);
