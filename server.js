@@ -75,26 +75,14 @@ const server = app.listen(4444, err => {
     }
     console.log("Server OK");
 });
-// const server = app.listen("https://chat-0y1j.onrender.com/", err => {
-//     if (err) {
-//         return console.log(err);
-//     }
-//     console.log("Server OK");
-// });
 
 // sockets
 const io = new Server(server, {
     cors: {
-        // origin: "http://localhost:3000",
-        // origin: "https://live-chat-theta.vercel.app/",
         origin: "*",
         credentials: true,
     },
 });
-
-// по кліку на юзера ми відкриваємо сокет-чат з ним
-// на фронті має бути он з ресівед меседжес, який записує отриману дату в стейт з усіма повідомлення чату
-// (list) => [...list, data]
 
 global.onlineUsers = new Map();
 
